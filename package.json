@@ -1,0 +1,26 @@
+{
+  "name": "gstcalc",
+  "version": "1.0.0",
+  "description": "An application to demonstrate GST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "GST",
+    "Demonstrator"
+  ],
+  "author": "Abhinav Bhopardikar",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.7",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.5",
+    "parser": "^0.1.4"
+  }
+}

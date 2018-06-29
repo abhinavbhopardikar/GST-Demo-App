@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GST Demonstrator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+<script>
+    angular
+        .module("gstApp",["ngRoute"])
+        .config(function($routeProvider){
+            $routeProvider
+            .when("/viewTable",{
+                templateUrl:'/viewTable'
+            })
+            .when("/",{
+                templateUrl:'/index'
+            })
+    })
+</script>        
+</head>
+    
+<body style="background:#282727; color:#FFFFFF">
+    <div class="jumbotron text-center" style="background:#232222"><h2>GST Demonstrator</h2>
+        <nav><a href="#!/">Home</a> | <a href="#!/viewTable">View list</a></nav>    
+    </div>
+     <div ng-view>
+    
+    </div> 
+</body>
+</html>    

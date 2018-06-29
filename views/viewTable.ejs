@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GST Demonstrator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   
+</head>
+    
+<body style="background:#282727; color:#FFFFFF">
+<style>
+
+    
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}    
+</style>    
+<div class="jumbotron text-center" style="background:#232222"><h2>GST Demonstrator</h2>
+    <nav><a href="/">Home</a> | <a href="/viewTable">View list</a></nav>
+</div>     
+<div class="container">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Item No.</th>
+        <th>Item name</th>
+        <th>Price</th>
+        <th>GST %</th>
+        <th>Time Stamp</th>
+        <th>Price after GST</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <%data.forEach(function(item){%>
+        <tr>
+            <td><%=item.slNo%></td>
+            <td><%=item.itemName%></td>
+            <td><%=item.price%></td>
+            <td><%=item.gstSlab%></td>
+            <td><%=item.timeStamp%></td>
+            <td><%=(item.gstSlab/100)*item.price + item.price%></td>
+        </tr>
+        <%});%>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
